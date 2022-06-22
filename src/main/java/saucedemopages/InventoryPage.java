@@ -20,6 +20,9 @@ public class InventoryPage extends CommonAPI {
     @FindBy(xpath = "//body/div[@id='root']/div[@id='page_wrapper']/div[@id='contents_wrapper']/div[@id='header_container']/div[1]/div[3]/a[1]")
     private WebElement cart;
 
+    @FindBy(css = "#reset_sidebar_link")
+    private WebElement resetAppState;
+
     @FindBy(css = "#inventory_sidebar_link")
     private WebElement allItems;
 
@@ -113,5 +116,7 @@ public class InventoryPage extends CommonAPI {
     public void goToCart(){
         click(cart);
     }
-
+    public void resetCart(){
+        click(resetAppState);
+    }
 }
